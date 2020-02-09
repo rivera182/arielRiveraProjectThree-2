@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     //initila variable for score
     let score = 0;
-
+    //Test
     //Answeron click function
     //the answer you clicked
     $(".answer").on("click", function(){
