@@ -11,6 +11,10 @@ $(document).ready(function(){
     //initila variable for score
     let score = 0;
 
+    //Answered Questions
+    let answeredQuestions = 0;
+
+
     //Answeron click function
     //the answer you clicked
     $(".answer").on("click", function(){
@@ -45,28 +49,43 @@ $(document).ready(function(){
         }
         // This turns off clicking after after determining right or wrong. **StackOverflow FTW!
         $(`.answer-${currentQuestion}`).attr("disabled", "disabled").off("click");   
-
-
         console.log(score);
+        //make sure keep record of answered questions.
+        answeredQuestions++;
+    });
 
+//On click function for btnNext
+    $(".btnNext").on("click", function(){
+        //get the button number
+        const btnNum = $(this).data("btn");
+        //get the next question area number for scroll
+        const nextQuestion = btnNum + 1;
+        //scroll to next section 1 sec
+        $("html, body").animate({
+            scrollTop: $(`.qc${nextQuestion}`).offset().top 
+        }, 1000);
     })
 
-    
+    //Get final results.
+    $(".btnFinal").on("click", function(){
+        //check for user to have answered all questions
+        if(answeredQuestions === questionsAnswers.length){
+            //print the score
+            $(".score").text(`${score}/${questionsAnswers.length}`);
+            //unhide the results section
+            $(".resultsContainer").css("display", "flex");
+            //scroll to the results section
+            $("html, body").animate({
+                scrollTop: $(".resultsContainer").offset().top
+            }, 1000);
+            //setTimeout for all question containers to hide once scroll has been completed
+            setTimeout (function(){
+                $(".questionContainer").hide();
+            }, 1000);
+            //alert user if they havent completed all questions
+        } else {
+            alert("finish the quiz!");
+        }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    })
 })
