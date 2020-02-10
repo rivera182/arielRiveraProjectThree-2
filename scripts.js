@@ -5,7 +5,14 @@ $(document).ready(function(){
     const questionsAnswers = [
         {question: 1, answer: 'a'},
         {question: 2, answer: 'c'},
-        {question: 3, answer: 'b'}
+        {question: 3, answer: 'b'},
+        {question: 4, answer: 'b'},
+        {question: 5, answer: 'd'},
+        {question: 6, answer: 'a'},
+        {question: 7, answer: 'd'},
+        {question: 8, answer: 'b'},
+        {question: 9, answer: 'a'},
+        {question: 10, answer: 'c'}
     ];
 
     //initila variable for score
