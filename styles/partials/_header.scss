@@ -1,102 +1,41 @@
-body{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* NAV */
-
 header {
-    background-image: url("./assets/2012malaysiangp14.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    // background-image: url("../assets/headerImg.jpg");
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-position: center;
     height: 100vh;
 }
 
 nav {
-    background: #2D2D2D;
+    position: fixed;
+    right:0px;
+    padding: 20px 30px;
+    // background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    // background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    // background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+    background: $accentColor;
+    border-radius: 0px 0px 10px 10px;
+    z-index:666;
+    font-size: 26px;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        color: $five;
+    }
+    li {
+        padding-bottom: 10px;
+        &:last-of-type {
+            padding-bottom: 0px;
+        }
+    }
+
 }
 
-nav p {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-}
-
-
-/* BODY */
-.questionContainer {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.resultsContainer{
-    min-height: 100vh;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-img {
-    width: 100%;
-    display: block;
-    border-radius: 50px;
-}
-
-.questionImage {
-    max-width: 400px;
-}
-
-.qc1 {
-    background: #FEA0BB
-
-    ;
-}
-.qc2 {
-    background: #F1B400;
-    ;
-}
-.qc3 {
-    background: #007AB7
-    ;
-}
-.qc4 {
-    background: #D7232A
-    ;
-}
-.qc5 {
-    background: #212850
-    ;
-}
-.qc6 {
-    background: #89101D
-    ;
-}
-.qc7 {
-    background: #BC9750
-    ;
-}
-.qc8 {
-    background:#383D42
-    ;
-}
-.qc9 {
-    background:#0F8E82
-    ;
-}
-.qc10 {
-    background: #653BBC
-    ;
-}
-
-
-button {
-    background: rgba(51, 66, 61, 0.5);
-    border: 1px solid black;
-    padding: 15px 20px;
-}
+// nav p {
+//     margin: 0;
+//     padding: 0;
+//     // color: #fff;
+// }

@@ -36,11 +36,13 @@ $(document).ready(function(){
             const question = questionsAnswers[i].question;
             // If current question and answer are correct change to green and increase score 
             if(currentQuestion === question && answer === correctAnswer) {
-                $(this).css("color", "green");
+                $(this).css("background-color", "green");
                 score++;
                 //if current question and answer is incorrect turn click to red and show correct answer
             } else if (currentQuestion === question && answer !== correctAnswer) {
-                $(this).css("color", "red");
+                $(this).css("background-color", "red");
+                const wrongX = " \u2718";
+                $(this).append(wrongX);
                 //get all siblings of clicked answer
                 const siblings = $(this).siblings();
                 // loop through all siblings
@@ -49,7 +51,10 @@ $(document).ready(function(){
                     const findAnswer = siblings[j].getAttribute('data-answer');
                     //match correct answer and turn text green.
                     if(findAnswer === correctAnswer){
-                        siblings[j].style.color = "green";
+                        siblings[j].style.backgroundColor = "green";
+                        const checkMark = " \u2714";
+                        siblings[j].textContent += checkMark;
+
                     }
                 } 
             }
