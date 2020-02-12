@@ -40,7 +40,7 @@ $(document).ready(function(){
                 score++;
                 //if current question and answer is incorrect turn click to red and show correct answer
             } else if (currentQuestion === question && answer !== correctAnswer) {
-                $(this).css("background-color", "red");
+                $(this).css("background-color", "#E2003B");
                 const wrongX = " \u2718";
                 $(this).append(wrongX);
                 //get all siblings of clicked answer

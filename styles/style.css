@@ -172,6 +172,12 @@ body {
   background: #001E49;
 }
 
+.wrapper {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 img {
   width: 100%;
   display: block;
@@ -181,6 +187,12 @@ button {
   background: #F1B400;
   border: 1px solid black;
   padding: 15px 20px;
+  border-radius: 4px;
+}
+
+button:active {
+  -webkit-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
 }
 
 ul {
@@ -254,12 +266,27 @@ nav li:last-of-type {
 }
 
 .questionCard {
-  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
 .questionImage {
-  width: 100%;
-  padding: 30px 25px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(40% - 10px);
+  margin-right: 10px;
+  padding: 30px 10px;
+  overflow: hidden;
+  border-radius: 10px 0px 0px 10px;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.1)));
@@ -267,19 +294,18 @@ nav li:last-of-type {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
   /* IE6-9 */
-  border-radius: 10px 10px 0px 0px;
-  margin-bottom: 5px;
 }
 
 .questionImage img {
-  max-width: 340px;
-  border-radius: 12px;
+  width: auto;
+  max-width: 380px;
+  height: auto;
+  max-height: 352px;
 }
 
 .question {
-  max-width: 100%;
-  padding: 10px 25px 30px;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+  width: 60%;
+  padding: 30px 10px;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.5)));
@@ -287,7 +313,7 @@ nav li:last-of-type {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
   /* IE6-9 */
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .answer {
@@ -297,4 +323,15 @@ nav li:last-of-type {
   margin: 10px 0px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.answer:hover {
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.answer:hover:active {
+  background: rgba(177, 179, 180, 0.3);
+  -webkit-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
 }

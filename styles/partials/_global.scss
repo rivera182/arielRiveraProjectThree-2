@@ -5,6 +5,13 @@ body{
     background: $backgroundColor;
 }
 
+.wrapper {
+    width:80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    // border: 1px solid yellow;
+}
+
 img {
     width: 100%;
     display: block;
@@ -14,7 +21,10 @@ button {
     background: $accentColor;
     border: 1px solid black;
     padding: 15px 20px;
-    
+    border-radius: 4px;
+        &:active {
+            box-shadow: inset 0px 0px 9px 0px rgba(0,0,0,0.75);
+        }
 }
 
 ul {
@@ -22,4 +32,3 @@ ul {
     margin:0;
     padding:0;
 }
-
