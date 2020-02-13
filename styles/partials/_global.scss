@@ -22,13 +22,19 @@ button {
     border: 1px solid black;
     padding: 15px 20px;
     border-radius: 4px;
-        &:active {
-            box-shadow: inset 0px 0px 9px 0px rgba(0,0,0,0.75);
-        }
+    
 }
 
 ul {
     list-style-type: none;
     margin:0;
     padding:0;
+}
+
+h1 {
+    margin: 0px;
+}
+
+p {
+    margin:0
 }

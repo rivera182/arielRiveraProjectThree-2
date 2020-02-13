@@ -36,11 +36,13 @@ $(document).ready(function(){
             const question = questionsAnswers[i].question;
             // If current question and answer are correct change to green and increase score 
             if(currentQuestion === question && answer === correctAnswer) {
-                $(this).css("background-color", "green");
+                $(this).css("background-color", "#219419");
+                $(this).css("color", "#fff");
                 score++;
                 //if current question and answer is incorrect turn click to red and show correct answer
             } else if (currentQuestion === question && answer !== correctAnswer) {
-                $(this).css("background-color", "#E2003B");
+                $(this).css("background-color", "#ba0707");
+                $(this).css("color", "#fff");
                 const wrongX = " \u2718";
                 $(this).append(wrongX);
                 //get all siblings of clicked answer
@@ -51,7 +53,8 @@ $(document).ready(function(){
                     const findAnswer = siblings[j].getAttribute('data-answer');
                     //match correct answer and turn text green.
                     if(findAnswer === correctAnswer){
-                        siblings[j].style.backgroundColor = "green";
+                        siblings[j].style.backgroundColor = "#219419";
+                        siblings[j].style.color = "#fff";
                         const checkMark = " \u2714";
                         siblings[j].textContent += checkMark;
 
@@ -65,7 +68,7 @@ $(document).ready(function(){
         //make sure keep record of answered questions.
         answeredQuestions++;
     });
-
+        
 //On click function for btnNext
     $(".btnNext").on("click", function(){
         //get the button number
@@ -96,7 +99,7 @@ $(document).ready(function(){
             }, 1000);
             //alert user if they havent completed all questions
         } else {
-            alert("finish the quiz!");
+            alert("You have unanswered questions!");
         }
 
     })
