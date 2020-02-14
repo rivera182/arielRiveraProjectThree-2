@@ -11,7 +11,6 @@
         }   
 }
 
-
 .questionImage {
     display: flex;
     justify-content: center;
@@ -47,7 +46,6 @@
     background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-
     button {
         margin-top: 41px;
     }
@@ -142,4 +140,107 @@
     font-size: 1.5rem;
     color: $accentColor;
     margin-top: 20px;
+}
+
+
+// media queries ------
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 1050px) {
+    .question {
+        padding: 25px 30px;
+    }
+
+
+    .answer {
+        padding:15px 0px;
+        margin: 5px 0px;
+        &:first-of-type {
+            margin: 0px 0px 5px 0px;
+        }
+        &:last-of-type {
+            margin: 5px 0px 0px 0px;
+        }
+    }
+}
+
+
+@media (max-width: 820px) {
+    .question {
+        padding: 15px 15px;
+    }
+    .questionImage {
+        padding: 15px 15px;
+    }
+    .resultsBtn {
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width: 768px) {
+    .questionContainer {
+        .questionCard {
+            flex-direction: column;
+        }   
+    }
+
+    .questionImage {
+        margin: 40px 0px 20px;
+        width: 100%;
+        border-radius: 10px 10px;
+    }
+    .question {
+        width: 100%;
+        border-radius: 10px 10px;
+        font-size: 1.5rem;
+        background: -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+        button {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .question {
+        font-size: 1.2rem;
+    }
+
+    .answer {
+        padding: 10px 0px;
+    }
+
+    .btnContainer {
+        width:100%;
+        max-width: 180px;
+        margin-top: 20px;
+        svg{
+            width: 105px;
+            height: 35px;
+        }
+        .btnNextHover {
+            padding: 0px 36px 7px;
+        }
+    
+    }
+
+    .resultsContent {
+        .correct {
+            font-size: 2.1rem;
+            color: #fff;
+        }
+            .score {
+                font-size: 8rem;
+                color: $accentColor;
+            }
+    }
+
+    .scoreText {
+        font-size: 1.7rem;
+    }
 }

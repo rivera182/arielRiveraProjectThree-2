@@ -22,7 +22,7 @@ $(document).ready(function(){
     let answeredQuestions = 0;
 
 
-    //Answeron click function
+    //Answer on click function
     //the answer you clicked
     $(".answer").on("click", function(){
         //Get data values for question and answer of clicked property
