@@ -170,6 +170,8 @@ body {
   padding: 0;
   text-align: center;
   background: #001E49;
+  font-family: "Bebas Neue", cursive;
+  font-size: 62.5%;
 }
 
 .wrapper {
@@ -188,6 +190,18 @@ button {
   border: 1px solid black;
   padding: 15px 20px;
   border-radius: 4px;
+  font-size: 1.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #c0920a;
+}
+
+button:hover:active {
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
 }
 
 ul {
@@ -198,6 +212,11 @@ ul {
 
 h1 {
   margin: 0px;
+  padding-top: 100px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 8rem;
+  color: #f1b400;
+  text-shadow: 0px 0px 7px black;
 }
 
 p {
@@ -215,24 +234,18 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.headerContent {
-  height: 70vh;
-  border-radius: 10px 10px;
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
-  /* IE6-9 */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 252, 252, 0)), to(#001e49)), url("../assets/header.jpg");
+  background-image: linear-gradient(to bottom, rgba(252, 252, 252, 0), #001e49), url("../assets/header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .btnStart {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-top: 60px;
 }
 
 .desktopNav {
@@ -248,6 +261,11 @@ header {
 
 .desktopNav .socialLinks a {
   color: #2d2d2d;
+}
+
+.desktopNav .socialLinks a:hover {
+  color: #001E49;
+  text-shadow: 0px 0px 7px black;
 }
 
 .desktopNav .fabs {
@@ -276,7 +294,7 @@ header {
           align-items: center;
 }
 
-.questionCard {
+.questionContainer .questionCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,6 +347,8 @@ header {
   width: 60%;
   padding: 45px 30px;
   border-radius: 0px 10px 10px 0px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.1)));
@@ -373,10 +393,6 @@ header {
   transition: 1s;
 }
 
-.btnContainer:hover {
-  opacity: 0.7;
-}
-
 .btnContainer svg {
   position: relative;
   width: 150px;
@@ -385,6 +401,7 @@ header {
 }
 
 .btnContainer .btnNextHover {
+  font-size: 1.5rem;
   text-transform: uppercase;
   position: absolute;
   left: 50%;
@@ -400,7 +417,7 @@ header {
 }
 
 .btnContainer .btnNextHover:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .resultsContainer {
@@ -441,6 +458,27 @@ header {
   /* IE6-9 */
 }
 
+.resultsContent .correct {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.resultsContent .score {
+  font-size: 11rem;
+  color: #f1b400;
+}
+
+.scoreText {
+  font-size: 2rem;
+  color: #001E49;
+}
+
+.playAgain {
+  font-size: 1.5rem;
+  color: #f1b400;
+  margin-top: 20px;
+}
+
 footer {
   background: #2d2d2d;
 }
@@ -451,4 +489,5 @@ footer {
 
 .footerContent p {
   color: #b1b3b4;
+  font-size: 1rem;
 }

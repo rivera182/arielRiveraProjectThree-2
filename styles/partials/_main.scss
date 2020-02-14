@@ -5,11 +5,12 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+        .questionCard {
+            display: flex;
+            width:100%;
+        }   
 }
-.questionCard {
-    display: flex;
-    width:100%;
-}
+
 
 .questionImage {
     display: flex;
@@ -40,6 +41,8 @@
     width: 60%;
     padding: 45px 30px;
     border-radius: 0px 10px 10px 0px;
+    font-family: $secondaryFont;
+    font-size: 1.5rem;
     background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -74,9 +77,7 @@
     margin-top: 50px;
     cursor:pointer;
     transition: 1s;
-    &:hover {
-        opacity:0.7;
-    }
+
     svg{
         position: relative;
         width: 150px;
@@ -84,6 +85,7 @@
         fill: $accentColor;
     }
     .btnNextHover {
+        font-size: 1.5rem;
         text-transform: uppercase;
         position: absolute;
         left: 50%;
@@ -96,7 +98,7 @@
         opacity:0;
         transition: 0.1s;
         &:hover {
-            opacity: 0.5;
+            opacity: 0.8;
         }
     }
 
@@ -108,14 +110,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .resultsContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     height:70vh;
     border-radius: 10px 10px;
     width:100%;
@@ -123,5 +123,23 @@
     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+        .correct {
+            font-size: 3rem;
+            color: #fff;
+        }
+            .score {
+                font-size: 11rem;
+                color: $accentColor;
+            }
+}
 
+.scoreText {
+    font-size: 2rem;
+    color: $backgroundColor;
+}
+
+.playAgain {
+    font-size: 1.5rem;
+    color: $accentColor;
+    margin-top: 20px;
 }

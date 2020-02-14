@@ -63,7 +63,7 @@ $(document).ready(function(){
             }
         }
         // This turns off clicking after after determining right or wrong. **StackOverflow FTW!
-        $(`.answer-${currentQuestion}`).attr("disabled", "disabled").off("click");   
+        $(`.answer${currentQuestion}`).attr("disabled", "disabled").off("click");   
         console.log(score);
         //make sure keep record of answered questions.
         answeredQuestions++;
@@ -87,6 +87,17 @@ $(document).ready(function(){
         if(answeredQuestions === questionsAnswers.length){
             //print the score
             $(".score").text(`${score}/${questionsAnswers.length}`);
+            //Print score message
+            if( score <= 5){
+                //Bleh
+                $(".scoreText").text("You're out of the race!");
+            } else if ( score <= 9 && score > 5){
+                //Bleh
+                $(".scoreText").text("Wow! You know your stuff!");
+            } else if (score === 10){
+                //Blehhhh
+                $(".scoreText").text("You're a champ!");
+            }
             //unhide the results section
             $(".resultsContainer").css("display", "flex");
             //scroll to the results section
